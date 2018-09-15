@@ -50,7 +50,7 @@ But, if creating a new project from scratch, follow the steps described in the n
 
 The testing framework used for building this project was _Jasmine_.
 
-In order for this framework to read the html DOM, the contents of the `index.html` file's `<body>` tag had to be added into the `SpecRunner.html` file's body, with the `<script>` tag for running the `spec.spec.js` file in the end. Also, The `<head>` tag will contain the `<link>` tag for the `css/app.css` file.
+In order for this framework to read the html DOM, the contents of the `index.html` file's `<body>` tag had to be added into the `SpecRunner.html` file's body, with the `<script>` tag for running the `spec/spec.js` file in the end. Also, The `<head>` tag will contain the `<link>` tag for the `css/app.css` file.
 
 The content of the SpecRunner file should be something like this:
 
