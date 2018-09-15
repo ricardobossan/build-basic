@@ -46,6 +46,47 @@ But, if creating a new project from scratch, follow the steps described in the n
 
 ## Building The Project With Node.js and a Building Tool
 
+#### Unit Tests
+
+The testing framework used for building this project was _Jasmine_.
+
+In order for this framework to read the html DOM, the contents of the `index.html` file's `<body>` tag had to be added into the `SpecRunner.html` file's body, with the `<script>` tag for running the `spec.spec.js` file in the end. Also, The `<head>` tag will contain the `<link>` tag for the `css/app.css` file.
+
+The content of the SpecRunner file should be something like this:
+
+	```
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Jasmine Spec Runner v3.1.0</title>
+	  <link rel="stylesheet" href="css/app.css">
+
+	  <link rel="shortcut icon" type="image/png" href="node_modules/jasmine-core/images/jasmine_favicon.png">
+	  <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+
+	  <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+	  <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+	  <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+
+
+	</head>
+
+	<body>
+		<main>
+			"HTML code here"
+		</main>
+
+	  <!-- include source files here... -->
+	  <script src="js/app.js"></script>
+
+	  <!-- include spec files here... -->
+	  <script src="spec/spec.js"></script>
+	</body>
+	</html>
+	```
+
+
 #### Node.js and Npm (Node Package Manager)
 
 Install [Node.js][1].
